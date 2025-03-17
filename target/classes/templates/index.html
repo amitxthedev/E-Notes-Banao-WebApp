@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" th:replace="~{base :: layout('Home', ~{::section})}">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+</head>
+<body>
+    
+    <section>
+        
+        <style>
+            .bg {
+                background: rgb(63,94,251);
+                background: linear-gradient(to bottom right, #2ecc71, #a3e4d7);
+                height: 100vh;
+                width: 100vw;
+                display: flex;
+                
+                justify-content: center;
+                align-items: center;
+                overflow: hidden;
+            }
+            
+
+            .wm {
+                animation: fadeIn 2s ease-in-out;
+                text-align: center;
+                
+                max-width: 1000px;
+                padding: 20px;
+                background: rgba(255, 255, 255, 0.8);
+                border-radius: 15px;
+                box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            }
+
+            .wm h1 {
+                font-size: 3rem;
+                color: #2c3e50;
+                margin-bottom: 20px;
+                animation: slideIn 1.5s ease-in-out;
+            }
+
+            .wm p {
+                font-size: 1.2rem;
+                color: #34495e;
+                margin-bottom: 30px;
+                animation: slideIn 2s ease-in-out;
+            }
+
+            .wm img {
+                animation: float 4s ease-in-out infinite;
+                margin-bottom: 20px;
+            }
+
+            .wm a {
+                font-size: 1.2rem;
+                padding: 10px 20px;
+                border-radius: 25px;
+                transition: all 0.3s ease;
+            }
+
+            .wm a:hover {
+                transform: scale(1.1);
+                box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+            }
+
+            /* Footer Styling */
+            .footer {
+                position: fixed;
+                bottom: 0;
+                width: 100%;
+                background: rgba(0, 0, 0, 0.8);
+                color: white;
+                text-align: center;
+                padding: 10px;
+                z-index: 1000;
+            }
+
+            .footer a {
+                color: #2ecc71;
+                text-decoration: none;
+                margin: 0 10px;
+                transition: color 0.3s ease;
+            }
+
+            .footer a:hover {
+                color: #27ae60;
+                text-decoration: underline;
+            }
+
+            /* Animations */
+            @keyframes fadeIn {
+                from { opacity: 0; }
+                to { opacity: 1; }
+            }
+
+            @keyframes slideIn {
+                from { transform: translateY(-50px); opacity: 0; }
+                to { transform: translateY(0); opacity: 1; }
+            }
+
+            @keyframes float {
+                0%, 100% { transform: translateY(0); }
+                50% { transform: translateY(-20px); }
+            }
+        </style>
+       
+
+        <div class="container-fluid m-0 p-0 bg text-center">
+            <div class="wm">
+                <h1 class="fs-1">Welcome to E-Notes 📖</h1>
+                <img src="/images/icon.webp" height="300px" width="200px" alt="Sticky Note Png Clip Art - Sticky Note Clipart Png, Transparent Png@kindpng.com">
+                <p>Effortlessly manage your notes, stay organized, and keep all your important ideas at your fingertips. With seamless access, smart organization, and intuitive features, you'll never lose track of your thoughts, inspirations, or to-do lists again. Stay productive and in control, no matter where life takes you!</p>
+                <a href="/register" class="btn btn-success">Get Started</a>
+            </div>
+        </div>
+
+    
+
+    </section>
+
+    <!-- Footer -->
+    <div class="footer">
+        <p>© 2023 E-Notes. All rights reserved. | <a href="/privacy">Privacy Policy</a> | <a href="/terms">Terms of Service</a></p>
+    </div>
+
+</body>
+</html>
